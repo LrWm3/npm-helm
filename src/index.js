@@ -12,6 +12,7 @@ async function main() {
 
   // Constants
   const binaryName = "helm";
+  const binaryInputArgs = process.argv.slice(2);
 
   log.setDefaultLevel("debug")
 
@@ -28,10 +29,15 @@ async function main() {
   // See if the file is there
   if (fs.existsSync(fullBinaryPath)) {
     console.debug(`Found binary ${fullBinaryPath}`)
-    runCommand(fullBinaryPath, 'version')
+    runCommand(fullBinaryPath, binaryInputArgs)
     // Now that we have the binary, we want to try running it
   } else {
-    console.error(`Couldn't find expected binary ${fullBinaryPath}!`)
+    console.error(`Couldn't find expected binary ${fullBinaryPath}! Is your platform (${binaryDirName}) supported?`)
+    console.error('  Supported Platforms:')
+    console.error('  - windows-x86')
+    console.error('  - mac-x86')
+    console.error('  - linux-x86')
+
   }
 }
 
