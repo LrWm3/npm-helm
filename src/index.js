@@ -4,6 +4,8 @@ let fs = require("fs")
 let path = require("path")
 var log = require('loglevel');
 
+log.setDefaultLevel("info")
+
 // Dependencies
 let getPlatform = require("./get-platform.js").default
 let runCommand = require('./run-command')
@@ -14,7 +16,6 @@ async function main() {
   const binaryName = "helm";
   const binaryInputArgs = process.argv.slice(2);
 
-  log.setDefaultLevel("debug")
 
   // Get platform, to select the appropriate binary to run
   let platform = getPlatform();
@@ -28,17 +29,17 @@ async function main() {
 
   // See if the file is there
   if (fs.existsSync(fullBinaryPath)) {
-    console.debug(`Found binary ${fullBinaryPath}`)
+    log.debug(`Found binary ${fullBinaryPath}`)
     runCommand(fullBinaryPath, binaryInputArgs)
     // Now that we have the binary, we want to try running it
   } else {
-    console.error(`Couldn't find expected binary ${fullBinaryPath}! Is your platform (${binaryDirName}) supported?`)
-    console.error('  Supported Platforms:')
-    console.error('  - windows-x86')
-    console.error('  - mac-x86')
-    console.error('  - linux-x86')
+    log.error(`Couldn't find expected binary ${fullBinaryPath}! Is your platform (${binaryDirName}) supported?`)
+    log.error('  Supported Platforms:')
+    log.error('  - windows-x86')
+    log.error('  - mac-x86')
+    log.error('  - linux-x86')
 
   }
 }
 
-main().then(console.log('done!'))
+main()
