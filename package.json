@@ -8,6 +8,6 @@
   },
   "scripts": {
     "test": "node src template test/template-test",
-    "docker-build": "docker build . -t $npm_package_version"
+    "docker-build": "docker build . -t npm-k8s-helm:$npm_package_version"
   }
 }
