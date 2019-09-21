@@ -1,4 +1,5 @@
-// Libs
+#!/usr/bin/env node
+
 require = require("esm")(module)
 let fs = require("fs")
 let path = require("path")
