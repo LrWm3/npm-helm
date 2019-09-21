@@ -1,6 +1,6 @@
 {
   "name": "@williammarsman/k8s-helm",
-  "version": "0.1.2-latest",
+  "version": "0.1.3-latest",
   "description": "binaries for the helm command-line tool",
   "bin": {
     "npm-helm": "./src/index.js"
