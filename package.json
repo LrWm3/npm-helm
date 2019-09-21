@@ -3,8 +3,8 @@
   "version": "0.1.0-latest",
   "description": "binaries for the helm command-line tool",
   "bin": {
-
-  }
+    "npm-helm": "./src/index.js"
+  },
   "dependencies": {
     "esm": "^3.2.25",
     "loglevel": "^1.6.4"
