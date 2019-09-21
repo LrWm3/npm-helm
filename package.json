@@ -1,6 +1,6 @@
 {
   "name": "@williammarsman/k8s-helm",
-  "version": "0.1.5-latest",
+  "version": "0.1.5",
   "description": "binaries for the helm command-line tool",
   "bin": {
     "npm-helm": "./src/index.js"
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WilliamTheMarsman/npm-helm"
+    "url": "git+https://github.com/WilliamTheMarsman/npm-helm.git"
   },
   "author": "William Marsman",
   "license": "Apache v2.0",
