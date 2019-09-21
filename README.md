@@ -34,7 +34,7 @@ This is a big package; I recommend only installing it using with the `--save-dev
 Global installation is simple
 
 ```bash
-npm install -g williammarsman/k8s-helm
+npm install -g @williammarsman/k8s-helm
 
 ## Now found in '/usr/local/bin/npm-helm', which should be in PATH env
 npm-helm version
@@ -46,7 +46,7 @@ For a project installation, the `--save-dev` flag is recommended to not impact f
 ```bash
 # Project installation
 ## Now found in './{project-dir}/node_modules/.bin/npm-helm'
-npm install williammarsman/k8s-helm --save-dev
+npm install @williammarsman/k8s-helm --save-dev
 ```
 
 Once installed, add the following to the `scripts` field in your `package.json` file to make it available in the project as `npm run npm-helm`
@@ -60,7 +60,7 @@ Once installed, add the following to the `scripts` field in your `package.json` 
     "npm-helm": "./node_modules/.bin/npm-helm"
   },
   "devDependencies": {
-    "williammarsman/k8s-helm": "^0.1.0"
+    "@williammarsman/k8s-helm": "^0.1.0"
   }
 }
 ```
